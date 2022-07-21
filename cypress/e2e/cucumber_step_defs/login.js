@@ -9,16 +9,13 @@ When('I enter username and password', ()=>{
 	
 	cy.on('uncaught:exception', (err, runnable) => {
 
-         if(err.message.includes('Cannot read properties of undefined')){
+		if(err.message.includes('Cannot read properties of undefined')){
 
-               console.log('Application Error Javascript Token')
-
-               return false;
-
-            }
-
-            return true
-        })
+			console.log('Application Error Javascript')
+			return false;
+			}
+		return true
+		})
 	cy.wait(15000)
 	cy.get('[id=j_username]').clear()
     cy.get('[id=j_username]').type(Cypress.env('user_id'));
