@@ -25,24 +25,31 @@ describe('demo', () => {
   		.contains('Employee List')
   		.click()
   	cy.get('[title="add"]').click() //click add button in toolbar
-
-  	cy.get('[id=subformenv_hrmEmployeeSecondary_firstName]').type('John')//enter first name
-  	cy.get('[id=subformenv_hrmEmployeeSecondary_Lastname]').type('Doe')//enter last name
+    cy.fixture('employee_data.json').then((data) => {
+      for (var index in data) {
+        cy.get('[id=subformenv_hrmEmployeeSecondary_firstName]').clear()//clear first name
+        cy.get('[id=subformenv_hrmEmployeeSecondary_firstName]').type(data[index].first_name)//enter first name
+        cy.get('[id=subformenv_hrmEmployeeSecondary_Lastname]').clear()//clear last name
+        cy.get('[id=subformenv_hrmEmployeeSecondary_Lastname]').type(data[index].last_name)//enter last name
   	cy.get(':nth-child(8) > .k-widget > .k-picker-wrap > .k-select').click()//select DOB
   	cy.get('[id=subformenv_hrmEmployeeSecondary_dateObBirthNew_dateview]').type('{enter}')
-  
-  	cy.get('[id=subformenv_hrmEmployeeSecondary_serviceNumber]').type('800001')//emp id
-  	cy.get('[id=subformenv_hrmEmployeeSecondary_cnic]').type('1234567890987')//cnic
+    cy.get('[id=subformenv_hrmEmployeeSecondary_serviceNumber]').clear()//clearing emp id
+  	cy.get('[id=subformenv_hrmEmployeeSecondary_serviceNumber]').type(data[index].emp_id)//emp id
+  	cy.get('[id=subformenv_hrmEmployeeSecondary_cnic]').clear()//clear cnic
+    cy.get('[id=subformenv_hrmEmployeeSecondary_cnic]').type(data[index].cnic)//cnic
   	cy.get('input[type="radio"]').check('NON FILER')//radio button tax filer
   	cy.get('input[type="radio"]').check('NO')//radio  button disability
-  	cy.get('[name=subformenv_hrmEmployeeSecondary_factoryFkId_input]').type('APF')//dropdown factory
+  	cy.get('[name=subformenv_hrmEmployeeSecondary_factoryFkId_input]').clear()//clear factory dropdown
+    cy.get('[name=subformenv_hrmEmployeeSecondary_factoryFkId_input]').type('APF')//dropdown factory
+    cy.get('[name=subformenv_hrmEmployeeSecondary_resourceTypeFkId_input]').clear()//clear resource dropdown
   	cy.get('[name=subformenv_hrmEmployeeSecondary_resourceTypeFkId_input]').type('CIVILIAN')//dropdown resource type
   	
   //	cy.get('[id=submit]').click()
   
 
 
-
+      }
+    })
 
 
 
