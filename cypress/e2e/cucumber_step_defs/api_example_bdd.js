@@ -75,24 +75,19 @@ When ('I put a new user',()=>{
             "name": "morpheus",
             "job": "zion resident"
         }
+        }).then( (result) => {
+ 				
+            cy.wrap(result).as('result_put')
+           
+           })
         
       });
 
-});
 
 Then ('the response code is 200',()=>{
-    cy.request({
-        method: "PUT",
-        url: "https://reqres.in/api/users/2",
-        body:{
-            "name": "morpheus",
-            "job": "zion resident"
-        }
-        
-      }).then( (result) => {
- 				
-        expect(result.status).to.eq(200)
-       
-       });
+    cy.get('@result_put').then(result => {
+        expect(result.status).to.eq(200);
+     });
+ 			   
 
 });
