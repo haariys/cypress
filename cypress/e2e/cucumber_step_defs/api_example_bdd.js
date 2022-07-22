@@ -3,13 +3,18 @@ import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
 Given('A list of users is available', ()=> {
     cy.request({
         method: 'GET', 
-          url: 'https://reqres.in/api/users?page=0', 
+          url: 'https://reqres.in/api/users?page=2', 
           
             }).then( (result) => {
              
              expect(result.status).to.eq(200)
-             //expect(result.body.data[0].first_name).to.eq('Michael')
-            
+            let count = Object.keys(result.body.data).length;
+             cy.log(count);
+             assert.equal(count, 6, 'page size = 6')
+             cy.wrap(result.body.data[0]).its('avatar').should('contain', '.jpg')
+
+
+
             })
 });
 
@@ -40,6 +45,7 @@ Then ('display the response body to log',()=>{
 Then ('name should be Janet',()=>{
     cy.get('@name').then(name => {
         expect(name).to.contain("Janet")
+        assert.isString(name, 'type is string')
      });
 
 });
