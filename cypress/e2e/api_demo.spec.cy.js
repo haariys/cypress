@@ -46,6 +46,36 @@ describe('demo', () => {
 
   })
 
+  it("PATCH", () => {
+    cy.request({
+      method: "PATCH",
+      url: "https://reqres.in/api/users/2",
+      body: {
+     
+   
+    "job": "new job",
+
+      },
+    }).then( (result) => {
+ 				
+		expect(result.status).to.eq(200);
+		cy.log(result.body);
+		expect(result.body.job).to.eq('new job');
+	   
+	   })
+  });
+  it("DELETE", () => {
+    cy.request({
+      method: "DELETE",
+      url: "https://reqres.in/api/users/3",
+  
+    }).then( (result) => {
+ 				
+		expect(result.status).to.eq(204);
+			   
+	   })
+  });
+
 
 
 
