@@ -28,6 +28,7 @@ module.exports = defineConfig({
     google: 'https://www.google.com.pk',
     user_id: '205700',
     user_pass: '@Haris2057',
+    email_regex : /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
 
   },
     trashAssetsBeforeRuns: false,
