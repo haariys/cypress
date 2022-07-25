@@ -12,7 +12,11 @@ Given('A list of users is available', ()=> {
              cy.log(count);
              assert.equal(count, 6, 'page size = 6')
              cy.wrap(result.body.data[0]).its('avatar').should('contain', '.jpg')
-
+             expect(result.body.data[0].id).to.be.a('number')
+             expect(result.body.data[0].first_name).to.be.a('string')
+             let regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
+             cy.wrap(result.body.data[0]).its('email')
+  .should('match',regex)
 
 
             })
