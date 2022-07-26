@@ -1,14 +1,22 @@
 export class login{
+    getEmailField() {
+        return cy.get('[id=j_username]')
+    }
+
+    getPasswordField() {
+        return cy.get('[id=j_password]')
+    }
+
     navigate()    {
         cy.visit('/');
     }
 
     login(user,pass)
     {
-        cy.get('[id=j_username]').clear()
-        cy.get('[id=j_username]').type(user);
-        cy.get('[id=j_password]').clear()
-        cy.get('[id=j_password]').type(pass);
+        this.getEmailField().clear()
+        this.getEmailField().type(user);
+        this.getPasswordField().clear()
+        this.getPasswordField().type(pass);
     }
 
     submit()
