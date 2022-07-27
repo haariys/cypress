@@ -32,6 +32,8 @@ module.exports = defineConfig({
 
   },
     trashAssetsBeforeRuns: false,
+    experimentalSessionSupport : true,
+
     
 
   },
