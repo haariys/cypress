@@ -11,7 +11,7 @@ describe('POM demo', () => {
     
     it('test_1', () => {
         myObj.navigate();
-        myObj.login(data[0].user_name,Cypress.env('user_pass'));
+        myObj.login(data[1].user_name,data[1].password);
         myObj.submit();
   });
 });
