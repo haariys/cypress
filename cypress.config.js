@@ -32,7 +32,9 @@ module.exports = defineConfig({
 
   },
     trashAssetsBeforeRuns: false,
-    experimentalSessionAndOrigin : true,
+   //experimentalSessionAndOrigin : true,
+   // includeShadowDom: true,
+   // chromeWebSecurity: false
 
     
 
