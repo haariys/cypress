@@ -16,7 +16,7 @@ export class login{
         this.getEmailField().clear()
         this.getEmailField().type(user);
         this.getPasswordField().clear()
-        this.getPasswordField().type(pass);
+        this.getPasswordField().type(pass,{log:false});
     }
 
     submit()
