@@ -2,6 +2,8 @@
 //https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests
 //https://docs.cypress.io/api/commands/get
 //https://docs.cypress.io/guides/references/best-practices#Selecting-Elements
+//https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests#Hooks
+//https://docs.cypress.io/api/commands/wait
 describe('demo', () => {
 	before(function() {
   // Steps before  tests
