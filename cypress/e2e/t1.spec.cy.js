@@ -1,3 +1,7 @@
+//https://docs.cypress.io/guides/end-to-end-testing/writing-your-first-end-to-end-test#Add-a-test-file
+//https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests
+//https://docs.cypress.io/api/commands/get
+//https://docs.cypress.io/guides/references/best-practices#Selecting-Elements
 describe('demo', () => {
 	before(function() {
   // Steps before  tests

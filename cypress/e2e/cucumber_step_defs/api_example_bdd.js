@@ -1,3 +1,8 @@
+//https://docs.cypress.io/guides/guides/network-requests
+//https://docs.cypress.io/api/commands/request
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+//https://docs.cypress.io/api/commands/contains#Regular-Expression
+//https://docs.cypress.io/api/commands/wrap
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
 
 Given('A list of users is available', ()=> {

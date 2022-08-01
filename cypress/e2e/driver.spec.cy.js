@@ -1,3 +1,4 @@
+//https://docs.cypress.io/api/commands/fixture
 import {login} from './pages/login';
 let data;
 const myObj = new login();

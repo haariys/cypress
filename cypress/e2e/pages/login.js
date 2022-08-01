@@ -1,3 +1,4 @@
+//https://lambdageeks.com/page-object-model-cypress-example/
 export class login{
     getEmailField() {
         return cy.get('[id=j_username]')

@@ -1,3 +1,5 @@
+//https://docs.cypress.io/guides/guides/environment-variables
+//https://docs.cypress.io/api/cypress-api/env
 //import { Given, When, Then, And } from "@badeball/cypress-cucumber-preprocessor";
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
 

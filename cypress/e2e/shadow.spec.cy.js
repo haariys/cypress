@@ -1,3 +1,5 @@
+//https://docs.cypress.io/api/commands/shadow
+//https://testersdock.com/cypress-shadow-dom/
 describe('Example to demonstrate the handling of Shadow Dom in Cypress', () => {
     before(() => {
         cy.visit('https://books-pwakit.appspot.com/')
