@@ -1,14 +1,11 @@
 [
-	{
-   
-    "color": "Red"
-},
-{
-
-    "color": "Orange"
-},
-{
- 
-    "color": "Green"
-}
+    {
+        "color": "Red"
+    },
+    {
+        "color": "Orange"
+    },
+    {
+        "color": "Green"
+    }
 ]

@@ -1,5 +1,5 @@
 //https://lambdageeks.com/page-object-model-cypress-example/
-export class login{
+export class login {
     getEmailField() {
         return cy.get('[id=j_username]')
     }
@@ -8,20 +8,18 @@ export class login{
         return cy.get('[id=j_password]')
     }
 
-    navigate()    {
+    navigate() {
         cy.visit('/');
     }
 
-    login(user,pass)
-    {
+    login(user, pass) {
         this.getEmailField().clear()
         this.getEmailField().type(user);
         this.getPasswordField().clear()
-        this.getPasswordField().type(pass,{log:false});
+        this.getPasswordField().type(pass, { log: false });
     }
 
-    submit()
-    {
+    submit() {
         cy.get('[type=submit]').click()
 
     }

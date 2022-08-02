@@ -1,21 +1,20 @@
 [
-	{
-   
-    "first_name": "John",
-    "last_name":"Doe",
-    "emp_id":"80002",
-    "cnic":"8000000000002"
-},
-{
-    "first_name": "Ali",
-    "last_name":"Hassan",
-    "emp_id":"80003",
-    "cnic":"8000000000003"
-},
-{
-    "first_name": "Umer",
-    "last_name":"Ahmed",
-    "emp_id":"80004",
-    "cnic":"8000000000004"
-}
+    {
+        "first_name": "John",
+        "last_name": "Doe",
+        "emp_id": "80002",
+        "cnic": "8000000000002"
+    },
+    {
+        "first_name": "Ali",
+        "last_name": "Hassan",
+        "emp_id": "80003",
+        "cnic": "8000000000003"
+    },
+    {
+        "first_name": "Umer",
+        "last_name": "Ahmed",
+        "emp_id": "80004",
+        "cnic": "8000000000004"
+    }
 ]
