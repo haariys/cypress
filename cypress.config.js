@@ -23,16 +23,17 @@ module.exports = defineConfig({
 
 
     },
+    
     env: {
       google: 'https://www.google.com.pk',
-      user_id: '205700',
-      user_pass: '@Haris2057',
+      user_id: 'admin',
+      user_pass: 'Tomcat@123',
       email_regex: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
 
     },
     trashAssetsBeforeRuns: false,
     //experimentalSessionAndOrigin : true,
     // includeShadowDom: true,
-    // chromeWebSecurity: false
+    chromeWebSecurity: false
   },
 });
