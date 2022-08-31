@@ -2,7 +2,7 @@ import 'cypress-iframe';
 
 describe('RaisingNOC', () => {
   before(function () {
-    cy.visit('/')
+    cy.visit('/')//default url
     cy.wait(10000)
     cy.on('uncaught:exception', (err, runnable) => {
 
