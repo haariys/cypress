@@ -14,28 +14,37 @@ describe('RaisingNOC', () => {
       return true
     })
     cy.get('[id=j_username]').clear()
-    cy.get('[id=j_username]').type(Cypress.env('user_id'));
+    cy.get('[id=j_username]').type('8081');
     cy.get('[id=j_password]').clear()
-    cy.get('[id=j_password]').type(Cypress.env('user_pass'));
+    cy.get('[id=j_password]').type('Care@123');
     cy.get('[type=submit]').click()
 
 
   })
   it('test_1', () => {
-    cy.get(':nth-child(6) > .app-link', { timeout: 30000 }).should('be.visible').click()// open employee module
+    //cy.get(':nth-child(6) > .app-link', { timeout: 30000 }).should('be.visible').click()// open employee module
+    cy.wait(15000)
+    cy.get('#apps')
+      .contains('Quality Control')
+      .click()
     cy.get('.current-category > .menu-link').click()
     //
-    cy.get('#category-container > li:nth-child(4) > a').click()
+    //cy.get('#category-container > li:nth-child(4) > a').click()
+    cy.get('#category-container')
+      .contains('Reports')
+      .click()
     cy.get('#category-container')
       .contains('Non Conformance Reports')
       .click()
     cy.get('#grid > div.k-header.k-grid-toolbar > a:nth-child(1)').click()
-    cy.get('input[name="ncType_input"]').clear()
+    
     cy.wait(5000)
-    cy.get('input[name="ncType_input"]').type('MAJOR')
+    cy.get('input[name="ncType_input"]').clear()
+    cy.wait(2000)
+    cy.get('input[name="ncType_input"]').type(' MAJOR')
     
     cy.wait(2000)
-    cy.get('input[name="ncType_input"]').type('{enter}')
+    
     cy.get('input[name="gpDte_hrmfrkey_input"]').type('JF-17 MRO')
     cy.get('input[name="gpDte_hrmfrkey_input"]').blur()
     cy.wait(2000)
@@ -110,6 +119,39 @@ describe('RaisingNOC', () => {
     cy.wait(10000)
     cy.get('#field24_qcRemarksForm_remarks').type('DDQ Remarks entered')
     cy.get('#assignmentComplete').click()
+    cy.wait(2000)
+    cy.get('#fac_name').click()
+
+  })
+  it('route_2', () => {
+    cy.visit('http://172.16.10.4:8082/jw/web/login')
+    cy.wait(10000)
+    cy.on('uncaught:exception', (err, runnable) => {
+
+      if (err.message.includes('Cannot read properties of undefined')) {
+
+        console.log('Application Error Javascript')
+        return false;
+      }
+      return true
+    })
+    cy.get('[id=j_username]').clear()
+    cy.get('[id=j_username]').type('1797');//ca supervisor
+    cy.get('[id=j_password]').clear()
+    cy.get('[id=j_password]').type('Care@123');
+    cy.get('[type=submit]').click()
+    cy.wait(10000)
+
+    cy.get('#apps')
+      .contains('Quality Control')
+      .click()
+
+    cy.get('.inbox-notification > .btn > img').click()
+    cy.get('.dropdown-menu > :nth-child(3) > a').click()
+    cy.wait(10000)
+    cy.get('#correctiveActionDetails').type('CA Supervisor Remarks entered @ 31/8/22 4.55')
+    cy.get('input[name="partNumber_logfrkey_input"]').type('C-SPANNER SPL')
+    cy.get('#workers_input').type("SUPV-NOMAN GHAFFAR-5556-PAINTER")
     cy.wait(2000)
     cy.get('#fac_name').click()
 
