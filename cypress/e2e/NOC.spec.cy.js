@@ -6,7 +6,7 @@ describe('RaisingNOC', () => {
     myObj.navigate();
     myObj.login('8081', 'Care@123');
   })
-it('test_1', () => {
+  it('test_1', () => {
     cy.wait(15000)
     myObj.selectQC();
     cy.get('.current-category > .menu-link').click()
