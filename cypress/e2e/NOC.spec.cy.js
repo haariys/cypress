@@ -20,7 +20,7 @@ describe('RaisingNOC', () => {
     cy.wait(5000)
     cy.get('input[name="ncType_input"]').clear()
     cy.wait(2000)
-    cy.get('input[name="ncType_input"]').type(' MAJOR')
+    cy.get('input[name="ncType_input"]').type(' MAJOR{enter}')
     cy.wait(2000)
     cy.get('input[name="gpDte_hrmfrkey_input"]').type('JF-17 MRO')
     cy.get('input[name="gpDte_hrmfrkey_input"]').blur()
