@@ -1,12 +1,16 @@
 import 'cypress-iframe';
 import { login } from './pages/login';
+let data;
 const myObj = new login();
 describe('RaisingNOC', () => {
   before(function () {
-    myObj.navigate();
-    myObj.login('8081', 'Care@123');
-  })
+    cy.fixture('NCReport').then((testData) => {
+      data = testData;
+    });
+     })
   it('test_1', () => {
+    myObj.navigate();
+    myObj.login(data[0].user_name, data[0].password);
     cy.wait(15000)
     myObj.selectQC();
     cy.get('.current-category > .menu-link').click()
@@ -59,7 +63,7 @@ describe('RaisingNOC', () => {
   it('route_1', () => {
     myObj.navigate();
     cy.wait(30000)
-    myObj.login('8082', 'Care@321');
+    myObj.login(data[1].user_name, data[1].password);
     cy.wait(10000)
     myObj.selectQC();
     cy.get('.inbox-notification > .btn > img').click()
@@ -72,7 +76,7 @@ describe('RaisingNOC', () => {
   })
   it('route_2', () => {
     myObj.navigate();
-    myObj.login('6936', 'Care@123');
+    myObj.login(data[2].user_name, data[2].password);
     cy.wait(10000)
     myObj.selectQC();
     cy.wait(10000)
@@ -88,7 +92,7 @@ describe('RaisingNOC', () => {
   })
   it('route_3', () => {
     myObj.navigate();
-    myObj.login('88881', 'Care@321');
+    myObj.login(data[3].user_name, data[3].password);
     cy.wait(10000)
     myObj.selectQC();
     cy.wait(10000)
@@ -104,7 +108,7 @@ describe('RaisingNOC', () => {
   })
   it('route_4', () => {
     myObj.navigate();
-    myObj.login('8081', 'Care@123');
+    myObj.login(data[0].user_name, data[0].password);
     cy.wait(10000)
     myObj.selectQC();
     cy.wait(10000)
@@ -119,7 +123,7 @@ describe('RaisingNOC', () => {
   })
   it('route_5', () => {
     myObj.navigate();
-    myObj.login('863025', 'Care@123');
+    myObj.login(data[6].user_name, data[6].password);
     cy.wait(20000)
     myObj.selectQC();
     cy.wait(10000)
@@ -131,7 +135,7 @@ describe('RaisingNOC', () => {
   })
   it('route_6', () => {
     myObj.navigate();
-    myObj.login('12134', 'Care@123');
+    myObj.login(data[5].user_name, data[5].password);
     cy.wait(20000)
     myObj.selectQC();
     cy.wait(10000)
@@ -143,7 +147,7 @@ describe('RaisingNOC', () => {
   })
   it('route_7', () => {
     myObj.navigate();
-    myObj.login('8081', 'Care@123');
+    myObj.login(data[0].user_name, data[0].password);
     cy.wait(20000)
     myObj.selectQC();
     cy.wait(10000)
@@ -155,7 +159,7 @@ describe('RaisingNOC', () => {
   })
   it('route_8', () => {
     myObj.navigate();
-    myObj.login('8082', 'Care@321');
+    myObj.login(data[1].user_name, data[1].password);
     cy.wait(20000)
     myObj.selectQC();
     cy.wait(10000)
@@ -167,7 +171,7 @@ describe('RaisingNOC', () => {
   })
   it('route_9', () => {
     myObj.navigate();
-    myObj.login('8081', 'Care@123');
+    myObj.login(data[0].user_name, data[0].password);
     cy.wait(20000)
     myObj.selectQC();
     cy.wait(10000)
