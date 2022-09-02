@@ -5,7 +5,6 @@ describe('RaisingNOC', () => {
   before(function () {
     myObj.navigate();
     myObj.login('8081', 'Care@123');
-    myObj.submit();
   })
   it('test_1', () => {
     cy.wait(15000)
@@ -61,7 +60,6 @@ describe('RaisingNOC', () => {
     myObj.navigate();
     cy.wait(30000)
     myObj.login('8082', 'Care@321');
-    myObj.submit();
     cy.wait(10000)
     myObj.selectQC();
     cy.get('.inbox-notification > .btn > img').click()
@@ -75,7 +73,6 @@ describe('RaisingNOC', () => {
   it('route_2', () => {
     myObj.navigate();
     myObj.login('6936', 'Care@123');
-    myObj.submit();
     cy.wait(10000)
     myObj.selectQC();
     cy.wait(10000)
@@ -92,7 +89,6 @@ describe('RaisingNOC', () => {
   it('route_3', () => {
     myObj.navigate();
     myObj.login('88881', 'Care@321');
-    myObj.submit();
     cy.wait(10000)
     myObj.selectQC();
     cy.wait(10000)
@@ -109,7 +105,6 @@ describe('RaisingNOC', () => {
   it('route_4', () => {
     myObj.navigate();
     myObj.login('8081', 'Care@123');
-    myObj.submit();
     cy.wait(10000)
     myObj.selectQC();
     cy.wait(10000)
@@ -125,7 +120,6 @@ describe('RaisingNOC', () => {
   it('route_5', () => {
     myObj.navigate();
     myObj.login('863025', 'Care@123');
-    myObj.submit();
     cy.wait(20000)
     myObj.selectQC();
     cy.wait(10000)
@@ -138,7 +132,6 @@ describe('RaisingNOC', () => {
   it('route_6', () => {
     myObj.navigate();
     myObj.login('12134', 'Care@123');
-    myObj.submit();
     cy.wait(20000)
     myObj.selectQC();
     cy.wait(10000)
@@ -151,7 +144,6 @@ describe('RaisingNOC', () => {
   it('route_7', () => {
     myObj.navigate();
     myObj.login('8081', 'Care@123');
-    myObj.submit();
     cy.wait(20000)
     myObj.selectQC();
     cy.wait(10000)
@@ -164,7 +156,6 @@ describe('RaisingNOC', () => {
   it('route_8', () => {
     myObj.navigate();
     myObj.login('8082', 'Care@321');
-    myObj.submit();
     cy.wait(20000)
     myObj.selectQC();
     cy.wait(10000)
@@ -177,7 +168,6 @@ describe('RaisingNOC', () => {
   it('route_9', () => {
     myObj.navigate();
     myObj.login('8081', 'Care@123');
-    myObj.submit();
     cy.wait(20000)
     myObj.selectQC();
     cy.wait(10000)
