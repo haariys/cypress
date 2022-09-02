@@ -16,7 +16,7 @@ module.exports = defineConfig({
   e2e: {
 
     specPattern: ["**/*.feature", "**/*.cy.{js,jsx,ts,tsx}"],
-    baseUrl: 'http://172.16.10.4:8082/jw',
+    baseUrl: 'http://172.16.10.4:8082/jw/web/login',
     setupNodeEvents(on, config) {
       on('file:preprocessor', cucumber())
       require('cypress-mochawesome-reporter/plugin')(on);

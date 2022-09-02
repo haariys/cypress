@@ -10,9 +10,20 @@ export class login {
 
     navigate() {
         cy.visit('/');
+        cy.wait(10000)
+        cy.on('uncaught:exception', (err, runnable) => {
+    
+          if (err.message.includes('Cannot read properties of undefined')) {
+    
+            console.log('Application Error Javascript')
+            return false;
+          }
+          return true
+        })
     }
 
     login(user, pass) {
+        
         this.getEmailField().clear()
         this.getEmailField().type(user);
         this.getPasswordField().clear()
@@ -22,5 +33,11 @@ export class login {
     submit() {
         cy.get('[type=submit]').click()
 
+    }
+
+    selectQC(){
+        cy.get('#apps')
+        .contains('Quality Control')
+        .click()
     }
 }
