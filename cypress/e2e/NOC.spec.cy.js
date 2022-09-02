@@ -37,14 +37,14 @@ describe('RaisingNOC', () => {
       .contains('Non Conformance Reports')
       .click()
     cy.get('#grid > div.k-header.k-grid-toolbar > a:nth-child(1)').click()
-    
+
     cy.wait(5000)
     cy.get('input[name="ncType_input"]').clear()
     cy.wait(2000)
     cy.get('input[name="ncType_input"]').type(' MAJOR')
-    
+
     cy.wait(2000)
-    
+
     cy.get('input[name="gpDte_hrmfrkey_input"]').type('JF-17 MRO')
     cy.get('input[name="gpDte_hrmfrkey_input"]').blur()
     cy.wait(2000)
@@ -148,16 +148,16 @@ describe('RaisingNOC', () => {
       .click()
     cy.wait(10000)
     cy.get('.badge').click()
-   
+
     cy.get('.dropdown-menu > :nth-child(3) > a').click()
-    
+
     cy.wait(10000)
     cy.get('#correctiveActionDetails').type('CA Supervisor Remarks entered @ 31/8/22 4.55')
     cy.get('input[name="workers_input"]').type('SUPV-NOMAN GHAFFAR-5556-PAINTER')
     cy.get('input[name="workers_input"]').blur()
     cy.get('#assignmentComplete').click()
 
-    
+
     cy.wait(5000)
     cy.get('#fac_name').click()
 
@@ -186,11 +186,11 @@ describe('RaisingNOC', () => {
       .click()
     cy.wait(10000)
     cy.get('.badge').click()
-   
+
     cy.get('.inbox-notification > .dropdown-menu > :nth-child(3) > a').click()
-    
+
     cy.wait(10000)
-    
+
     cy.get('input[value="QCI"]').click()
     cy.wait(2000)
     cy.get('input[value="AVOIDABLE"]').click()
@@ -225,16 +225,16 @@ describe('RaisingNOC', () => {
       .click()
     cy.wait(10000)
     cy.get('.badge').click()
-   
+
     cy.get('.inbox-notification > .dropdown-menu > :nth-child(3) > a').click()
-    
+
     cy.wait(10000)
-    
+
     cy.get('input[value="REPAIRED"]').click()
     cy.wait(2000)
     cy.get('input[name="DceRoutTo_input"]').type("CHF TECH-ASAD A")
     cy.get('#field13_qcRemarksForm_remarks').type("remarked133")
-    
+
     cy.get('#assignmentComplete').click()
 
 
@@ -265,20 +265,20 @@ describe('RaisingNOC', () => {
       .click()
     cy.wait(10000)
     cy.get('.badge').click()
-   
+
     cy.get('.inbox-notification > .dropdown-menu > :nth-child(3) > a').click()
-    
+
     cy.wait(10000)
-    
-  
+
+
     cy.get('#field24_qcRemarksForm_remarks').type("remarked133")
-    
+
     cy.get('#assignmentComplete').click()
 
 
 
   })
- 
+
   it('route_6', () => {
     cy.visit('http://172.16.10.4:8082/jw/web/login')
     cy.wait(10000)
@@ -303,14 +303,14 @@ describe('RaisingNOC', () => {
       .click()
     cy.wait(10000)
     cy.get('.badge').click()
-   
+
     cy.get('.inbox-notification > .dropdown-menu > :nth-child(3) > a').click()
-    
+
     cy.wait(10000)
-    
-  
+
+
     cy.get('#field24_qcRemarksForm_remarks').type("remarked133")
-    
+
     cy.get('#assignmentComplete').click()
 
 
@@ -341,14 +341,14 @@ describe('RaisingNOC', () => {
       .click()
     cy.wait(10000)
     cy.get('.badge').click()
-   
+
     cy.get('.inbox-notification > .dropdown-menu > :nth-child(3) > a').click()
-    
+
     cy.wait(10000)
-    
-  
+
+
     cy.get('#field13_qcRemarksForm_remarks').type("remarked133")
-    
+
     cy.get('#assignmentComplete').click()
 
 
@@ -379,14 +379,14 @@ describe('RaisingNOC', () => {
       .click()
     cy.wait(10000)
     cy.get('.badge').click()
-   
+
     cy.get('.inbox-notification > .dropdown-menu > :nth-child(3) > a').click()
-    
+
     cy.wait(10000)
-    
-  
+
+
     cy.get('input[value="CLOSED"]').click()
-    
+
     cy.get('#assignmentComplete').click()
 
 
@@ -416,18 +416,18 @@ describe('RaisingNOC', () => {
       .click()
     cy.wait(10000)
     cy.get('.badge').click()
-   
+
     cy.get('.inbox-notification > .dropdown-menu > :nth-child(3) > a').click()
-    
+
     cy.wait(10000)
-    
-  
-   
-    
+
+
+
+
     cy.get('#assignmentComplete').click()
 
 
 
   })
- 
+
 })
