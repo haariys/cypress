@@ -1,4 +1,3 @@
-import 'cypress-iframe';
 import { login } from './pages/login';
 let data;
 const myObj = new login();
