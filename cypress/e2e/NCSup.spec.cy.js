@@ -8,7 +8,7 @@ describe('RaisingNOC', () => {
             data = testData;
         });
     })
-    it.skip('test_1', () => {
+    it('test_1', () => {
         myObj.navigate();
         myObj.login(data[0].user_name, data[0].password);
         cy.wait(15000)
@@ -53,14 +53,14 @@ describe('RaisingNOC', () => {
             })
         cy.get('button[name="assignmentComplete"]').click()
     })
-    it.skip('logout', () => {
+    it('logout', () => {
         cy.wait(15000)
         cy.get('.username_userlink')
             .click()
         cy.get('.user-link > .dropdown-menu > :nth-child(2) > a > :nth-child(2)')
             .click()
     })
-    it.skip('route_1', () => {
+    it('route_1', () => {
         myObj.navigate();
         cy.wait(30000)
         myObj.login(data[1].user_name, data[1].password);
@@ -74,7 +74,7 @@ describe('RaisingNOC', () => {
         cy.wait(2000)
         cy.get('#fac_name').click()
     })
-    it.skip('route_2', () => {
+    it('route_2', () => {
         myObj.navigate();
         myObj.login(data[2].user_name, data[2].password);
         cy.wait(10000)
@@ -90,7 +90,7 @@ describe('RaisingNOC', () => {
         cy.wait(5000)
         cy.get('#fac_name').click()
     })
-    it.skip('route_3', () => {
+    it('route_3', () => {
         myObj.navigate();
         myObj.login(data[3].user_name, data[3].password);
         cy.wait(10000)
@@ -104,7 +104,7 @@ describe('RaisingNOC', () => {
         cy.get('#field24_qcRemarksForm_remarks').type('sept first 5 pm')
         cy.get('#assignmentComplete').click()
     })
-    it.skip('route_4', () => {
+    it('route_4', () => {
         myObj.navigate();
         myObj.login(data[2].user_name, data[2].password);//6936
         cy.wait(10000)
@@ -116,7 +116,7 @@ describe('RaisingNOC', () => {
 
         cy.get('#assignmentComplete').click()
     })
-    it.skip('route_5', () => {
+    it('route_5', () => {
         myObj.navigate();
         myObj.login(data[3].user_name, data[3].password);
         cy.wait(10000)
