@@ -1,5 +1,4 @@
-import 'cypress-iframe';
-import { login } from './pages/login';
+import { login } from '../../pages/login.js';
 const myObj = new login(); describe('demo', () => {
   it('route_2', () => {
     myObj.navigate();

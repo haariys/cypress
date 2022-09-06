@@ -1,4 +1,4 @@
-import { login } from './pages/login';
+import { login } from '../../pages/login.js';
 let data;
 const Login = new login();
 describe('RaisingNOC', () => {
