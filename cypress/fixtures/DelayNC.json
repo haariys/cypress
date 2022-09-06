@@ -1,0 +1,52 @@
+[
+    {
+        "user_name": "602",
+        "password": "Care@123",
+        "designation":"OIC"
+    },
+    {
+        "user_name": "8081",
+        "password": "Care@123",
+        "designation":"QCI"
+    },
+    {
+        "user_name": "70003",
+        "password": "Care@123",
+        "designation":"SHOP_SUPPLIER"
+    },
+    {
+        "user_name": "603",
+        "password": "Care@123",
+        "designation":"DD_LOG"
+    },
+    {
+        "user_name": "863025",
+        "password": "Care@123",
+        "designation":"DCE"
+    },
+    {
+        "user_name": "12134",
+        "password": "Care@123",
+        "designation":"CE"
+    },
+    {
+        "user_name": "8082",
+        "password": "Care@321",
+        "designation":"DDQ"
+    },
+    {
+        "user_name": "601",
+        "password": "Care@123",
+        "designation":"DQ"
+    },
+    {
+        "user_name": "3734",
+        "password": "Care@123",
+        "designation":"DOCK_CHIEF"
+    },
+    {
+        "user_name": "6936",
+        "password": "Care@123",
+        "designation":"SUPERVISOR"
+    }
+]
