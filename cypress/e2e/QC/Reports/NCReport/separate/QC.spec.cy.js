@@ -1,4 +1,4 @@
-import { login } from '../../pages/login.js';
+import { login } from '../../../../pages/login.js';
 const myObj = new login();
 describe('demo', () => {
   it('route_1', () => {

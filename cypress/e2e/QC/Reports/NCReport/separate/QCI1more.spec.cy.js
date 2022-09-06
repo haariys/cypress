@@ -1,4 +1,4 @@
-import { login } from '../../pages/login.js';
+import { login } from '../../../../pages/login.js';
 describe('RaisingNOC', () => {
   it('route_9', () => {
     myObj.navigate();
