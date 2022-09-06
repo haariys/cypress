@@ -1,7 +1,7 @@
 import 'cypress-iframe';
 import { login } from './pages/login';
 let data;
-const myObj = new login();
+const Login = new login();
 describe('RaisingNOC', () => {
     before(function () {
         cy.fixture('NCReport').then((testData) => {
@@ -9,10 +9,10 @@ describe('RaisingNOC', () => {
         });
     })
     it('test_1', () => {
-        myObj.navigate();
-        myObj.login(data[0].user_name, data[0].password);
+        Login.navigate();
+        Login.login(data[0].user_name, data[0].password);
         cy.wait(15000)
-        myObj.selectQC();
+        Login.selectQC();
         cy.get('.current-category > .menu-link').click()
         cy.get('#category-container')
             .contains('Reports')
@@ -61,11 +61,11 @@ describe('RaisingNOC', () => {
             .click()
     })
     it('route_1', () => {
-        myObj.navigate();
+        Login.navigate();
         cy.wait(30000)
-        myObj.login(data[1].user_name, data[1].password);
+        Login.login(data[1].user_name, data[1].password);
         cy.wait(10000)
-        myObj.selectQC();
+        Login.selectQC();
         cy.get('.inbox-notification > .btn > img').click()
         cy.get('.dropdown-menu > :nth-child(3) > a').click()
         cy.wait(10000)
@@ -75,10 +75,10 @@ describe('RaisingNOC', () => {
         cy.get('#fac_name').click()
     })
     it('route_2', () => {
-        myObj.navigate();
-        myObj.login(data[2].user_name, data[2].password);
+        Login.navigate();
+        Login.login(data[2].user_name, data[2].password);
         cy.wait(10000)
-        myObj.selectQC();
+        Login.selectQC();
         cy.wait(10000)
         cy.get('.badge').click()
         cy.get('.dropdown-menu > :nth-child(3) > a').click()
@@ -91,10 +91,10 @@ describe('RaisingNOC', () => {
         cy.get('#fac_name').click()
     })
     it('route_3', () => {
-        myObj.navigate();
-        myObj.login(data[3].user_name, data[3].password);
+        Login.navigate();
+        Login.login(data[3].user_name, data[3].password);
         cy.wait(10000)
-        myObj.selectQC();
+        Login.selectQC();
         cy.wait(10000)
         cy.get('.badge').click()
         cy.get('.inbox-notification > .dropdown-menu > :nth-child(3) > a').click()
@@ -105,10 +105,10 @@ describe('RaisingNOC', () => {
         cy.get('#assignmentComplete').click()
     })
     it('route_4', () => {
-        myObj.navigate();
-        myObj.login(data[2].user_name, data[2].password);//6936
+        Login.navigate();
+        Login.login(data[2].user_name, data[2].password);//6936
         cy.wait(10000)
-        myObj.selectQC();
+        Login.selectQC();
         cy.wait(10000)
         cy.get('.badge').click()
         cy.get('.inbox-notification > .dropdown-menu > :nth-child(3) > a').click()
@@ -117,10 +117,10 @@ describe('RaisingNOC', () => {
         cy.get('#assignmentComplete').click()
     })
     it('route_5', () => {
-        myObj.navigate();
-        myObj.login(data[3].user_name, data[3].password);
+        Login.navigate();
+        Login.login(data[3].user_name, data[3].password);
         cy.wait(10000)
-        myObj.selectQC();
+        Login.selectQC();
         cy.wait(10000)
         cy.get('.badge').click()
         cy.get('.inbox-notification > .dropdown-menu > :nth-child(3) > a').click()
@@ -133,10 +133,10 @@ describe('RaisingNOC', () => {
         cy.get('#assignmentComplete').click()
     })
     it('route_6', () => {
-        myObj.navigate();
-        myObj.login(data[0].user_name, data[0].password);
+        Login.navigate();
+        Login.login(data[0].user_name, data[0].password);
         cy.wait(10000)
-        myObj.selectQC();
+        Login.selectQC();
         cy.wait(10000)
         cy.get('.badge').click()
         cy.get('.inbox-notification > .dropdown-menu > :nth-child(3) > a').click()
@@ -148,10 +148,10 @@ describe('RaisingNOC', () => {
         cy.get('#assignmentComplete').click()
     })
     it('route_7', () => {
-        myObj.navigate();
-        myObj.login(data[6].user_name, data[6].password);
+        Login.navigate();
+        Login.login(data[6].user_name, data[6].password);
         cy.wait(10000)
-        myObj.selectQC();
+        Login.selectQC();
         cy.wait(10000)
         cy.get('.badge').click()
         cy.get('.inbox-notification > .dropdown-menu > :nth-child(3) > a').click()
@@ -160,10 +160,10 @@ describe('RaisingNOC', () => {
         cy.get('#assignmentComplete').click()
     })
     it('route_8', () => {
-        myObj.navigate();
-        myObj.login(data[5].user_name, data[5].password);
+        Login.navigate();
+        Login.login(data[5].user_name, data[5].password);
         cy.wait(10000)
-        myObj.selectQC();
+        Login.selectQC();
         cy.wait(10000)
         cy.get('.badge').click()
         cy.get('.inbox-notification > .dropdown-menu > :nth-child(3) > a').click()
@@ -172,10 +172,10 @@ describe('RaisingNOC', () => {
         cy.get('#assignmentComplete').click()
     })
     it('route_9', () => {
-        myObj.navigate();
-        myObj.login(data[0].user_name, data[0].password);
+        Login.navigate();
+        Login.login(data[0].user_name, data[0].password);
         cy.wait(10000)
-        myObj.selectQC();
+        Login.selectQC();
         cy.wait(10000)
         cy.get('.badge').click()
         cy.get('.inbox-notification > .dropdown-menu > :nth-child(3) > a').click()
@@ -184,10 +184,10 @@ describe('RaisingNOC', () => {
         cy.get('#assignmentComplete').click()
     })
     it('route_10', () => {
-        myObj.navigate();
-        myObj.login(data[1].user_name, data[1].password);
+        Login.navigate();
+        Login.login(data[1].user_name, data[1].password);
         cy.wait(10000)
-        myObj.selectQC();
+        Login.selectQC();
         cy.wait(10000)
         cy.get('.badge').click()
         cy.get('.inbox-notification > .dropdown-menu > :nth-child(3) > a').click()
@@ -196,10 +196,10 @@ describe('RaisingNOC', () => {
         cy.get('#assignmentComplete').click()
     })
     it('route_11', () => {
-        myObj.navigate();
-        myObj.login(data[0].user_name, data[0].password);
+        Login.navigate();
+        Login.login(data[0].user_name, data[0].password);
         cy.wait(10000)
-        myObj.selectQC();
+        Login.selectQC();
         cy.wait(10000)
         cy.get('.badge').click()
         cy.get('.inbox-notification > .dropdown-menu > :nth-child(3) > a').click()
