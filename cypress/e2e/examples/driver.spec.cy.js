@@ -1,5 +1,6 @@
 //https://docs.cypress.io/api/commands/fixture
-import { login } from './pages/login';
+import { login } from '../../pages/login.js';
+
 let data;
 const myObj = new login();
 
