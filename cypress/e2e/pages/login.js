@@ -8,7 +8,7 @@ export class login {
     }
     navigate() {
         cy.visit('/');
-        cy.wait(20000)
+        cy.wait(10000)
         cy.on('uncaught:exception', (err, runnable) => {
             if (err.message.includes('Cannot read properties of undefined')) {
                 console.log('Application Error Javascript')
