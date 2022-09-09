@@ -1,0 +1,30 @@
+[
+    {
+        "selectNCType": "Major",
+        "group": "JF-17 MRO",
+        "shop":"Quality",
+        "bay":"DR CELL",
+        "systemType":"aircraft",
+        "routeTo":"FLT LT-OBAID OIC",
+        "briefedTo":"FLT LT-HARIS JAVED-17192-ENGG",
+        "system":"JF-17",
+        "tailNumber":"76-543",
+        "partNumber":"HOLSAW-152MM",
+        "serialNo":"152MM",
+        "referenceDocuments":"09-0911",
+        "NCStatement":"this is my nc statement"
+    },
+    {
+        "selectNCType": "Minor",
+        "group": "ARG",
+        "shop":"DIS ASSEMBLY F-7",
+        "bay":"Engine",
+        "systemType":"COMPONENT",
+        "routeTo":"",
+        "briedfedTo":"",
+        "partNumber":"EXTENSION SET",
+        "serialNo":"152MM",
+        "referenceDocuments":"09-0911",
+        "NCStatement":"this is my nc statement"
+    }
+]
