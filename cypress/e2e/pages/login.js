@@ -32,4 +32,14 @@ export class login {
             .contains('Quality Control')
             .click()
     }
+    logout() {
+        cy.get('.username_userlink')
+            .click()
+        cy.get('.user-link > .dropdown-menu > :nth-child(2) > a > :nth-child(2)')
+            .click()
+    }
+    openNotification() {
+        cy.get('.inbox-notification > .btn > img').click()
+        cy.get('.dropdown-menu > :nth-child(3) > a').click()
+    }
 }
