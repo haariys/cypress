@@ -28,6 +28,7 @@ export class login {
         cy.get('[type=submit]').click()
     }
     selectQC() {
+        cy.wait(12000)
         cy.get('#apps')
             .contains('Quality Control')
             .click()
