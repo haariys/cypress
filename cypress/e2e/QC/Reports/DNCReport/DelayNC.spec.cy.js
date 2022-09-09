@@ -5,7 +5,7 @@ describe('RaisingNOC', () => {
     before(function () {
         cy.fixture('DelayNC').then((testData) => {
             data = testData;
-        });
+        }); 
     })
     it('initiate', () => {
         Login.navigate();
