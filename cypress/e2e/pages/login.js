@@ -39,7 +39,7 @@ export class login {
             .click()
     }
     openNotification() {
-        cy.get('.inbox-notification > .btn > img').click()
-        cy.get('.dropdown-menu > :nth-child(3) > a').click()
+        cy.get('.badge').click()
+        cy.get('.inbox-notification > .dropdown-menu > :nth-child(3) > a').click()
     }
 }

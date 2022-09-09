@@ -55,7 +55,6 @@ export class NCReport {
                 cy.wrap($body)
                     .type(x)
             })
-
     }
 
 }
