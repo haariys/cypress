@@ -48,8 +48,6 @@ describe('RaisingNOC', () => {
         cy.get('#CompWSheetSet1').type('test')
         cy.get('#CompFlowLineBook1').type('test')
         cy.get('#ActionedBy1').type('test')
-       // cy.get('#submit').click()
+        // cy.get('#submit').click()
     })
 })
-
-
