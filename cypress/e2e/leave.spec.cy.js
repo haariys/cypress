@@ -29,5 +29,4 @@ describe('leave', () => {
         cy.get('input[name="forwardedTo_input"]').blur()
         cy.get('#assignmentComplete').click()
     })
-    cy.get('.iziToast-message').should('eq', 'Leave type and category value required')
-  })
+})
