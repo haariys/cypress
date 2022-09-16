@@ -31,4 +31,3 @@ describe('leave', () => {
     })
     cy.get('.iziToast-message').should('eq', 'Leave type and category value required')
   })
-})
